@@ -30,33 +30,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/service/impl/CommoditySpecificationTitleServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Mapper/CommodityCommentMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/CommodityComment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
@@ -96,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="153">
               <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
             </state>
           </provider>
@@ -109,7 +82,37 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/Commodity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+              <caret line="19" selection-start-line="19" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/CommodityCommentReply.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="15" selection-start-line="15" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/OrderList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -164,6 +167,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -179,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/service/CommodityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/controller/OredrListController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/service/impl/CommodityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/OrderList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/service/OrderListService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/dao/OrderListMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/util/Page.java" />
@@ -218,6 +223,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/Mapper/CommodityCommentReplyMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/dao/CommodityCommentReplyMapper.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/OrderList.java" />
       </list>
     </option>
   </component>
@@ -250,12 +256,12 @@
     <option name="width" value="1896" />
     <option name="height" value="990" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -319,6 +325,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -479,16 +486,26 @@
       <workItem from="1655318921440" duration="98000" />
       <workItem from="1655625977725" duration="13000" />
       <workItem from="1655906018422" duration="9000" />
+      <workItem from="1657352921206" duration="349000" />
     </task>
+    <task id="LOCAL-00001" summary="提交">
+      <created>1657352966497</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657352966497</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="437556000" />
+    <option name="totallyTimeSpent" value="437905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="927" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822694" visible="true" weight="0.22128683" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822694" visible="true" weight="0.22369212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -563,6 +580,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -626,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/CommodityCollect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -688,13 +702,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/OrderList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -822,16 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/CommodityCommentReply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/Mapper/OrderListMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -952,13 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/Commodity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -992,8 +982,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="153">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/Commodity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/CommodityCommentReply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="15" selection-start-line="15" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lwh/shoppingwebsite/entity/OrderList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
