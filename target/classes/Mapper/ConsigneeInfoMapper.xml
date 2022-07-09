@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwh.shoppingwebsite.dao.ConsigneeInfoMapper">
+
+    <!-- 添加收货地址 -->
+    <insert id="addconsigneeInfo">
+        insert into `consignee_info` value (null,'',#{username},#{phone},#{id})
+    </insert>
+    
+    <!-- 查询收货地址 -->
+    <select id="queryConsigneeInfouid" resultType="ConsigneeInfo">
+        select * from `consignee_info` where uid=#{uid}
+    </select>
+
+    <!-- 修改收货地址 -->
+    <update id="updateConsigneelnfo">
+        update `consignee_info` set consigneeaddress=#{consigneeaddress},consigneename=#{consigneename},
+        consigneephone=#{consigneephone} where id=#{id}
+    </update>
+
+    <!-- 通过id查询收货信息 -->
+    <select id="queryConsigneeInfoid" resultType="ConsigneeInfo">
+        select * from `consignee_info` where id=#{id}
+    </select>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 商品规格标题 -->
+<mapper namespace="com.lwh.shoppingwebsite.dao.CommoditySpecificationTitleMapper">
+    <resultMap id="CommoditySpecificationTitleMap" type="com.lwh.shoppingwebsite.entity.CommoditySpecificationTitle">
+        <id property="id" column="id" />
+        <result property="specificationtitle" column="specificationtitle"/>
+        <result property="commodityid" column="commodityid"/>
+
+        <collection property="commoditySpecificationNames" ofType="CommoditySpecificationName"
+                    select="selectCommoditySpecificationName" column="id"/>
+    </resultMap>
+
+    <!-- 通过商品id查询规格 -->
+    <select id="getcommdidtyId" resultMap="CommoditySpecificationTitleMap">
+        select * from commodity_specification_title where commodityid=#{commodityId}
+    </select>
+    <!-- 查规格名称的表 -->
+    <select id="selectCommoditySpecificationName" resultType="CommoditySpecificationName">
+        select * from commodity_specification_name where commodityspecificationtitleid=#{id} ;
+    </select>
+</mapper>

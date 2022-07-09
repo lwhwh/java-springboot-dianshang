@@ -1,0 +1,29 @@
+swagger:
+  description: 310项目
+  title: 梁文航
+  base-package: "com.lwh.shopping.controller"
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shoppingwebsite?setUnicode=true&characterEncoding=utf8&useAffectedRows=true&useSSL=false
+    username: root
+    password: lwhlwhabcd
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+mybatis:
+  type-aliases-package: com.lwh.shoppingwebsite.entity
+  mapper-locations: classpath:mapper/*.xml
+  #configuration:
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+  port: 80

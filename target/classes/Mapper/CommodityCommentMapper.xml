@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwh.shoppingwebsite.dao.CommodityCommentMapper">
+
+    <resultMap id="CommodityCommentMap" type="com.lwh.shoppingwebsite.entity.CommodityComment">
+        <id property="id" column="id"/>
+        <result property="userid" column="userid"/>
+        <!-- 查询用户商品全部评论回复 -->
+        <collection property="commodityCommentReplies" ofType="CommodityCommentReply"
+                    select="selectCommodityCommentReply" column="id"/>
+         <!--查询用户-->
+        <collection property="user" ofType="User"
+                    select="selectUserId" column="userid"/>
+    </resultMap>
+    <!-- 回复评论的结果集，解决多表联查嵌套问题 -->
+    <resultMap id="CommodityCommentReplyMap" type="com.lwh.shoppingwebsite.entity.CommodityCommentReply">
+        <result property="userid" column="userid"/>
+        <result property="commoditycommentidreplyid" column="commoditycommentidreplyid"/>
+        <!-- 查询回复评论的用户 -->
+        <collection property="user" ofType="User"
+                    select="selectUserId" column="userid"/>
+        <!-- 查找当前评论回复的那条评论 依赖id有问题 -->
+        <collection property="commodityCommentReply" ofType="CommodityCommentReply"
+                    select="selectCommodityCommentReplyReplyid" column="commoditycommentidreplyid"/>
+    </resultMap>
+
+    <!-- 查找当前评论回复的是那条评论的结果集 -->
+    <resultMap id="CommodityCommentReplyMap2" type="com.lwh.shoppingwebsite.entity.CommodityCommentReply">
+        <result property="userid" column="userid"/>
+        <!-- 查询用户 -->
+        <collection property="user" ofType="User"
+                    select="selectUserId" column="userid"/>
+    </resultMap>
+
+<!--  通过商品id查询评论 -->
+    <select id="queryCommentCommodityId" resultMap="CommodityCommentMap">
+        select * from commodity_comment where commodityid=#{commodityId}
+    </select>
+    <!-- 查询用户 -->
+    <select id="selectUserId" resultType="User">
+        select * from `user` where id=#{userid};
+    </select>
+    <!-- 查询当前商品回复的所有评论 -->
+    <select id="selectCommodityCommentReply" resultMap="CommodityCommentReplyMap">
+        select * from `commodity_comment_reply` where commoditycommentidoneid=#{id};
+    </select>
+    <!-- 查找当前评论回复的那条评论 -->
+    <select id="selectCommodityCommentReplyReplyid" resultMap="CommodityCommentReplyMap2">
+        select * from `commodity_comment_reply` where  replyid=#{commoditycommentidreplyid}
+    </select>
+
+
+    <!-- 添加商品评论 -->
+    <insert id="addCommodityComment">
+        insert into commodity_comment value (null,#{commentdate},#{commentmessage},#{commodityid},#{userid})
+    </insert>
+
+    <!-- 删除评论 -->
+    <delete id="delCommodityComment">
+        delete from `commodity_comment` where id=#{id}
+    </delete>
+</mapper>
