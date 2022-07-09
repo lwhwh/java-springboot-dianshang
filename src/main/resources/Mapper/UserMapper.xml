@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwh.shoppingwebsite.dao.UserMapper">
+
+    <!-- 添加用户 -->
+    <insert id="addUser">
+        insert into `user` value (null,#{account},#{password},#{phone},#{username})
+    </insert>
+
+    <!-- 通过账号和密码查找 -->
+    <select id="findAccountAndPassword" resultType="User">
+        select * from `user` where account=#{account} and password=#{password}
+    </select>
+
+    <!-- 查询手机号是否存在 -->
+    <select id="queryPhone" resultType="User">
+        select * from `user` where phone=#{phone}
+    </select>
+</mapper>

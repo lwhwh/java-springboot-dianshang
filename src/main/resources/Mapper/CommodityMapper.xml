@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwh.shoppingwebsite.dao.CommodityMapper">
+    <!-- 通过二级标题查询商品 -->
+    <select id="queryAllproductclassifytwoid" resultType="Commodity">
+        select * from commodity where productclassifytwoid=#{productclassifytwoid}
+    </select>
+
+    <!-- 通过商品id查询商品信息 -->
+    <select id="querycommodityId" resultType="Commodity">
+        select * from commodity where id=#{commodityId}
+    </select>
+
+    <!-- 通过商品id查询当前商品的列表的图片路径 -->
+    <select id="findCommodityImgCommodityId" resultType="CommodityImg">
+      select * from `commodity_img` where commodityid=#{commodityId}
+    </select>
+    
+    <!-- 修改收藏数量 -->
+    <update id="updatecollectcount" >
+          update `commodity` set collectcount = #{collectcount} where id=#{commodityId}
+    </update>
+
+    <!-- 查询当前二级目录的商品数量 -->
+    <select id="queryproductclassifytwo" resultType="Commodity" >
+        select * from  `commodity` where productclassifytwoid=#{productclassifytwoid} and id!=#{id} ORDER BY RAND() LIMIT 3
+    </select>
+
+    <!-- 查询收藏大于0的数量-->
+    <select id="collectcount" resultType="int">
+        select count(id) from `commodity` WHERE collectcount>0
+    </select>
+
+    <!-- 查询收藏大于0的商品每次查5条-->
+    <select id="queryCollect" resultType="Commodity">
+        select * from `commodity` WHERE collectcount>0 limit #{i},#{pageCount}
+    </select>
+</mapper>

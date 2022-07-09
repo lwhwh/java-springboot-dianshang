@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwh.shoppingwebsite.dao.ShoppingTrolleyMapper">
+<!--查询当前用户的购物车-->
+    <select id="queryshoppingtrolleyuid" resultType="ShoppingTrolley">
+        select * from `shopping_trolley` where uid=#{uid}
+    </select>
+
+    <!-- 查询当前购物车是否已经添加了 -->
+    <select id="queryUidAndcidAndCommodityspecification" resultType="ShoppingTrolley">
+         select * from `shopping_trolley` where uid=#{uid} AND commodityid=#{commodityid} and commodityspecification=#{commodityspecification}
+    </select>
+
+    <!-- 添加一个购物车 -->
+    <insert id="addshoppingtrolley">
+        insert into shopping_trolley value (null,#{commoditycount},#{commodityid},#{commodityname},#{commodityprice},#{commodityspecification},#{totalprice},#{uid},#{commoditypicture})
+    </insert>
+
+    <!-- 修改数量和价钱 -->
+    <update id="updateshoppingtrolley">
+          update `shopping_trolley` set totalprice = #{totalprice},commoditycount=#{commoditycount} where id=#{id}
+    </update>
+
+    <!-- 删除购物车 -->
+    <delete id="delShoppingtrolley">
+        delete from `shopping_trolley` where id=#{id}
+    </delete>
+
+    <select id="queryshoppingtrolleyuidAndId" resultType="ShoppingTrolley">
+         select * from `shopping_trolley` where id=#{id} and uid=#{uid}
+    </select>
+
+    <select id="queryshoppingtrolleyid" resultType="ShoppingTrolley">
+         select * from `shopping_trolley` where id=#{id}
+    </select>
+</mapper>

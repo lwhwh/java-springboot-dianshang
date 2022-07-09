@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwh.shoppingwebsite.dao.CommodityCommentReplyMapper">
+
+ <!--   <resultMap id="CommodityCommentReplyMap" type="com.lwh.shoppingwebsite.entity.CommodityCommentReply">
+        <id property="replyid" column="replyid"/>
+        <result property="userid" column="userid"/>
+        <result property="commentreply" column="commentreply"/>
+        <result property="commoditycommentidoneid" column="commoditycommentidoneid"/>
+        <result property="commentdate" column="commentdate"/>
+        <result property="commentdate" column="commentdate"/>
+        <result property="commoditycommentidreplyid" column="commoditycommentidreplyid"/>
+        &lt;!&ndash; 查询用户 &ndash;&gt;
+        <collection property="user" ofType="User"
+                    select="selectUserId" column="userid"/>
+    </resultMap>-->
+    <!-- 通过id和回复id查询 -->
+    <!--<select id="queryCommodityCommentReply" resultMap="CommodityCommentReplyMap">
+        select * from `commodity_comment_reply` where replyid=#{replyid} AND commoditycommentidreplyid=#{commoditycommentidreplyid}
+    </select>-->
+    <!-- 通过collection查询当前用户 -->
+  <!--  <select id="selectUserId" resultType="User">
+        select * from `user` where id=#{userid};
+    </select>-->
+
+    <!-- 添加评论 -->
+    <insert id="addCommodityCommentReply">
+      insert into `commodity_comment_reply` value (null,#{commentdate},#{commentreply},#{commoditycommentidoneid},#{commoditycommentidreplyid},#{userid})
+    </insert>
+    <!-- 删除评论 -->
+    <delete id="delComentReply">
+        delete from `commodity_comment_reply` where replyid=#{replyid}
+    </delete>
+</mapper>

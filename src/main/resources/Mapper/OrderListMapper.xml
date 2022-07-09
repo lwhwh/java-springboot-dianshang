@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwh.shoppingwebsite.dao.OrderListMapper">
+
+    <!-- 添加订单 -->
+    <insert id="addorderList">
+        insert into `order_list` VALUE(null,#{address},#{orderstate},#{oredrnumber},#{phone},
+        #{uid},#{commodityid},#{commentstatus},
+        #{paymentstate},#{commoditypicture},#{username},#{count},#{commodityname},#{totalprice},#{freightstatus})
+    </insert>
+
+    <!-- 查询当前用户的订单 -->
+    <select id="getOrderListUid" resultType="OrderList">
+        select * from `order_list` where uid=#{uid}
+        <if test="statetitle=='pendingpayment'">
+          AND paymentstate!=1
+        </if>
+        <if test="statetitle=='Pendinggoods'">
+            AND freightstatus='未收货' and paymentstate=1
+        </if>
+        <if test="statetitle=='Pendingevaluate'">
+            AND commentstatus=0 and paymentstate=1 and freightstatus='已收货'
+        </if>
+        <if test="statetitle=='accomplish'">
+            AND orderstate='已完成' and paymentstate=1 and freightstatus='已收货' and commentstatus=1
+        </if>
+    </select>
+
+    <!-- 删除订单 -->
+    <delete id="delOredrListid">
+        delete from `order_list` where id=#{id}
+    </delete>
+
+    <!-- 修改订单状态 -->
+    <update id="updateOrderListstate">
+      update `order_list`
+        <if test="statetitle=='pendingpayment'">
+            set paymentstate=2
+        </if>
+        <if test="statetitle=='Pendinggoods'">
+            set freightstatus='已收货'
+        </if>
+        <if test="statetitle=='Pendingevaluate'">
+            set commentstatus=1,orderstate='已完成'
+        </if>
+        where id=#{id}
+    </update>
+</mapper>
